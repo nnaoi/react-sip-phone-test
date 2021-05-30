@@ -4,10 +4,10 @@ import { ReactSipPhone, phoneStore } from 'react-sip-phone'
 import 'react-sip-phone/dist/index.css'
 
 const urlParams = new URLSearchParams(window.location.search)
-const sipuri = urlParams.get('sipuri')
+const sipuri = process.env.REACT_APP_HOST
 const password = process.env.REACT_APP_PASSWORD
 const websocket =  process.env.REACT_APP_WEB_SOCKET
-const name = urlParams.get('name')
+const name = process.env.REACT_APP_NAME
 const disabledButtons = urlParams.get('buttons')
 const disabledFeatures = urlParams.get('features')
 const outsideComponentDial = urlParams.get('dial')
@@ -38,7 +38,6 @@ const App = () => {
         }}
         sipConfig={{
           websocket: websocket || '',
-          defaultCountryCode: '81',
         }}
         phoneConfig={{
           disabledButtons: disabledButtons || '', // Will remove button(s) from Phone component. E.g. hold transfer dialpadopen mute '
