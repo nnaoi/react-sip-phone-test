@@ -1,3 +1,13 @@
+# .env の例
+```
+REACT_APP_WEB_SOCKET="wss://example.com:8089/ws"
+REACT_APP_PASSWORD="password"
+REACT_APP_HOST="05012345678@example.com"
+REACT_APP_NAME="なんでもOK"
+```  
+
+`REACT_APP_NAME` は不要かもしれない。
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
